@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('user_role')->default('user'); // e.g., user, admin
+            $table->string('mill_loc')->nullable();       // e.g., mill1, mill2
             $table->rememberToken();
             $table->timestamps();
         });
